@@ -29,11 +29,7 @@ plt.title('Distribuição das notas de matemática por gênero')
 plt.show()
 ```
 
-![image.png](attachment:aee9b6cc-c59f-4f50-821f-b72b4de3f618:image.png)
-
-![image.png](attachment:ad17e856-f43c-4018-a23c-08f344e64893:image.png)
-
-![image.png](attachment:9864fd5b-8a02-4449-9565-27315c1365c8:image.png)
+https://github.com/carolribeiro95/StudentsPerformance/issues/1#issue-3785461768
 
 > Podemos observar nos gráficos boxplots acima que aparentemente a mediana das notas de matemática é maior para o gênero masculino e, em contrapartida, as medianas das notas de leitura e escrita são maiores para o gênero feminino, mas isso é estatisticamente significativo? Para verificar se realmente existe uma diferença entre as médias das notas entre os gêneros é necessário realizar um teste paramétrico de médias, o t de Student.
 > 
