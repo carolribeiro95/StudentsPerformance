@@ -1,23 +1,34 @@
+Objetivo do projeto: 
+
+Esse projeto visa responder algumas perguntas a respeito da base de dados de desempenho dos estudantes de uma escola. Seguem abaixo os questionamentos e a estratégia para responder às perguntas.
+
 1 - Existe relação entre o gênero e a nota nas disciplinas?
-Fazer um teste t para verificar diferença entre as médias de mulheres e homens.
+
+- Fazer um teste t para verificar diferença entre as médias de mulheres e homens.
 
 2- Existe relação entre os grupos étnicos e o nível de formação dos pais?
-Fazer um teste qui² para verificar associação entre os grupos e o nível de formação.
+
+- Fazer um teste qui² para verificar associação entre os grupos e o nível de formação.
 
 3 - Alunos que completaram o teste de preparação apresentaram maior média nas disciplinas?
-Fazer um test t para verificar se há diferença estatística das médias das notas entre os grupos que fizeram a preparação e aqueles que  não fizeram.
+
+- Fazer um test t para verificar se há diferença estatística das médias das notas entre os grupos que fizeram a preparação e aqueles que  não fizeram.
 
 4 - Existe relação entre as notas das disciplinas? Alunos que foram melhores em "reading" também foram em "writing"?
-Fazer uma matriz de correlação de Pearson/Spearman para verificar associação entre as notas.
+
+- Fazer uma matriz de correlação de Pearson/Spearman para verificar associação entre as notas.
 
 5 - Existe alguma relação entre alunos que possuem almoço gratuito com a média das notas?
-Verificar através de um test t se há diferença estatística entre as médias das notas do alunos entre os grupos que possuem almoço gratuito e daqueles que pagam, ou seja, a renda dos alunos influenciam na média das notas?
+
+- Verificar através de um test t se há diferença estatística entre as médias das notas do alunos entre os grupos que possuem almoço gratuito e daqueles que pagam, ou seja, a renda dos alunos influenciam na média das notas?
 
 6 - Existe alguma relação entre o nível de educação dos pais e a categoria de almoço dos alunos?
-Fazer um teste qui² para verificar associação entre o nível de graduação e a categoria de almoço, ou seja, a renda dos pais está relacionada com a escolaridade?
+
+- Fazer um teste qui² para verificar associação entre o nível de graduação e a categoria de almoço, ou seja, a renda dos pais está relacionada com a escolaridade?
 
 7 - Alunos cujos pais possuem graduação apresentaram maior média de notas?
-Fazer ANOVA para verificar se a média dos alunos é estatisticamente diferente de acordo com o nível de escolaridade dos pais.
+
+- Fazer ANOVA para verificar se a média dos alunos é estatisticamente diferente de acordo com o nível de escolaridade dos pais.
 
 ## Existe relação entre o gênero e a nota nas disciplinas?
 
@@ -29,7 +40,7 @@ plt.title('Distribuição das notas de matemática por gênero')
 plt.show()
 ```
 
-https://github.com/carolribeiro95/StudentsPerformance/issues/1#issue-3785461768
+<img width="1030" height="678" alt="Image" src="https://github.com/user-attachments/assets/2f936bf8-af75-4770-83f9-a3dbd979e048" />
 
 > Podemos observar nos gráficos boxplots acima que aparentemente a mediana das notas de matemática é maior para o gênero masculino e, em contrapartida, as medianas das notas de leitura e escrita são maiores para o gênero feminino, mas isso é estatisticamente significativo? Para verificar se realmente existe uma diferença entre as médias das notas entre os gêneros é necessário realizar um teste paramétrico de médias, o t de Student.
 > 
@@ -43,13 +54,7 @@ plt.ylabel('Média das notas')
 plt.show()
 ```
 
-![image.png](attachment:b0bac92a-7ddb-4610-9ede-70b3a847b6e0:image.png)
-
-![image.png](attachment:73902d72-51bf-4d56-acef-c500a76494f2:image.png)
-
-![image.png](attachment:9a25b56d-92e8-4c4f-b229-46a9b9f9b199:image.png)
-
-![image.png](attachment:e8640c46-c402-4078-b414-72919f87fb98:image.png)
+<img width="706" height="467" alt="Image" src="https://github.com/user-attachments/assets/3138211f-8448-48a1-9834-276eb2c2dd9b" />
 
 ```python
 # Médias das notas de matemática por gênero
@@ -59,7 +64,10 @@ print('Média das notas de matemática dos homens: %.2f' % media_male)
 print('Média das notas de matemática das mulheres: %.2f' % media_female)
 ```
 
-![image.png](attachment:535742f0-b4ce-49ef-a7b0-01cda9526699:image.png)
+
+Média das notas de matemárica dos homens: 68.73
+
+Média das notas de matemárica das mulheres: 63.63
 
 Aparentemente a média das notas de matemática dos homens é maior que a das mulheres, mas essa diferença é estatisticamente significativa?
 
@@ -86,13 +94,15 @@ else:
 
 ```
 
-![image.png](attachment:65005e38-5118-4ec4-9f30-184e71827db6:image.png)
+<img width="1020" height="120" alt="Image" src="https://github.com/user-attachments/assets/b0f8853d-a632-47fa-8612-862e5a181f3b" />
 
 ***Para um nível de significância de 5% podemos afirmar que a média das notas de matemática dos homens é maior que a das mulheres.***
 
 A média das notas de leitura das mulheres é maior que a médias das notas de leitura dos homens?
 
-![image.png](attachment:2f22da66-ec28-4353-9278-9604dd552490:image.png)
+Média das notas de leitura dos homens: 65.47
+
+Média das notas de leitura das mulheres: 72.61
 
 Aparentemente a média das notas de leitura das mulheres é maior que a dos homens, mas essa diferença é estatisticamente significativa?
 
@@ -112,7 +122,7 @@ else:
           das notas de leitura das mulheres é maior que a dos homens')
 ```
 
-![image.png](attachment:1d563f42-9c73-4a32-9aa8-baa968f7a7d9:image.png)
+<img width="1015" height="98" alt="Image" src="https://github.com/user-attachments/assets/1e4957fa-b51c-488e-9fba-e227b1bbf6ce" />
 
 ***Podemos afirmar então que, para um nível de significância de 5%, existe sim diferença na média das notas de leitura das mulheres, sendo maior que a média das notas de leitura dos homens.***
 
@@ -122,7 +132,7 @@ else:
 
 ### Matriz de correlação de Pearson
 
-![image.png](attachment:c36bf335-103a-4d9e-8273-bd7aa22ce2ed:image.png)
+<img width="1012" height="207" alt="Image" src="https://github.com/user-attachments/assets/0832a2a3-bcfa-439c-9d1d-8710256c5510" />
 
 > Observe que existe uma forte correlação positiva entre “writing” e “reading”, de 0.95. Isso é um forte indício que quanto maior a nota em “writing”, maior será a nota em “reading” e vice-versa.
 > 
@@ -131,7 +141,7 @@ else:
 
 Como os dados não seguem uma distribuição normal, a correlação de Spearman é mais confiável
 
-![image.png](attachment:a560cbd9-6fd9-4405-9657-ba77c02d3b30:image.png)
+<img width="1015" height="182" alt="Image" src="https://github.com/user-attachments/assets/1cd069a3-f188-4a5a-bb10-9d4b456b3839" />
 
 Podemos observar que de fato há uma correlação alta e positiva entre as notas “writing” e “reading”, de 0.948.
 
@@ -145,7 +155,7 @@ almoco = df['lunch']
 almoco
 ```
 
-![image.png](attachment:ce196159-6ee1-4289-9050-621fd113447a:image.png)
+<img width="420" height="410" alt="Image" src="https://github.com/user-attachments/assets/5569eb02-ab79-4efb-8838-cc0c7fbe2fd8" />
 
 ```python
 standard_lunch = df[df['lunch'] == 'standard']['media score']
@@ -154,7 +164,9 @@ free_lunch = df[df['lunch'] == 'free/reduced']['media score']
 print(f'Média das notas dos alunos com almoço gratuito: {free_lunch.mean():.2f}')
 ```
 
-![image.png](attachment:094428a5-9991-4558-8e43-fd97388b8e68:image.png)
+Média das notas dos alunos com almoço padrão: 70.84
+
+Média das notas dos alunos com almoço gratuito: 62.20
 
 A média das notas dos alunos com almoço padrão aparenta ser maior que a média das notas dos alnos com almoço gratuito, mas vamos verificar se existe diferença estatisticamente significativa entre as médias.
 
@@ -173,7 +185,7 @@ else:
           das notas dos alunos com almoço padrão é maior que a dos alunos com almoço gratuito')
 ```
 
-![image.png](attachment:edb5810b-10af-444d-9331-05cf74e294ed:image.png)
+<img width="1002" height="152" alt="Image" src="https://github.com/user-attachments/assets/22261f3e-8fb9-461e-8e99-39f306d6a4be" />
 
 Com base no teste t, podemos afirmar com um nível de significância de 5% que alunos com almoço padrão possuem média maior que alunos com almoço gratuito, ou seja, a renda dos alunos influencia na média das notas.
 
@@ -188,7 +200,9 @@ media_teste_none = df[df['test preparation course'] == 'none']['media score']
 print(f'Média das notas dos alunos que não completaram o curso de preparação: {media_teste_none.mean():.2f}')
 ```
 
-![image.png](attachment:971c31d7-0041-4905-81e1-d2e9bbfef47e:image.png)
+Média das notas dos alunos que completaram o curso de preparação: 72.67
+
+Média das notas dos alunos que não completaram o curso de preparação: 65.04
 
 Podemos observar que a média das notas dos alunos que completaram o curso de preparação para o teste é maior que a média dos alunos que não completaram, porém vamos verificar se de fato essa diferença é estatisticamente significativa para um nível de confiança de 95%
 
@@ -205,7 +219,7 @@ else:
           das notas dos alunos que completaram o curso de preparação é maior que a dos alunos que não completaram')
 ```
 
-![image.png](attachment:4adf1b4c-bf60-4f22-ac23-2be244a0bf45:image.png)
+<img width="1010" height="123" alt="Image" src="https://github.com/user-attachments/assets/ebf68c52-7dc2-4fe3-a20c-766887a8ba1e" />
 
 Para um nível de confiança de 95% podemos afirmar que a média dos alunos que completaram o curso de preparação para o teste é maior que daqueles que não completaram.
 
@@ -226,7 +240,7 @@ categorias por meio do teste qui-quadrado (χ2).
     contingency_table
     ```
     
-    ![image.png](attachment:dd7e1e22-943f-4b42-9607-c6b58cb76c0f:image.png)
+    <img width="972" height="248" alt="Image" src="https://github.com/user-attachments/assets/a82469a7-d9a6-49fe-b5b9-4c4a7419365e" />
     
     Estatística Qui²
     
@@ -239,7 +253,7 @@ categorias por meio do teste qui-quadrado (χ2).
     print(f"graus de liberdade: {tab[2]}")
     ```
     
-    ![image.png](attachment:350c4190-ee2a-43ee-93ec-fa0167955ac6:image.png)
+    <img width="716" height="245" alt="Image" src="https://github.com/user-attachments/assets/ed3bc260-dd4a-4737-a3e2-27304751fcae" />
     
     Para um nível de significância de 5%, como p-valor > 0.05, não rejeitamos H0 e portanto as variáveis se relacionam de forma aleatória e não faz sentido prosseguir com ANACOR.
     
@@ -261,7 +275,7 @@ print(f"p-valor da estatística: {round(tab_2[1], 4)}")
 print(f"graus de liberdade: {tab_2[2]}")
 ```
 
-![image.png](attachment:bc864580-4c22-459d-b8d3-8f73b9a82302:image.png)
+<img width="561" height="192" alt="Image" src="https://github.com/user-attachments/assets/6925ffd8-4072-4b32-a79f-1ebd1597f136" />
 
 Para um nível de significância de 5%, como p-valor > 0.05, então aceitamos H0 e, portanto, o nível de escolaridade dos pais não se relaciona com o tipo de “Lunch”, ou seja, a renda.
 
@@ -269,7 +283,7 @@ Para um nível de significância de 5%, como p-valor > 0.05, então aceitamos H0
 
 ## Alunos cujos pais possuem graduação apresentaram maior média de notas?
 
-![image.png](attachment:e16d37d6-1294-4e08-8af0-9c398ec970c9:image.png)
+<img width="1002" height="795" alt="Image" src="https://github.com/user-attachments/assets/7ddda87a-3985-41e4-b100-f9bea1361f62" />
 
 ```python
 # Teste ANOVA one-way
@@ -305,7 +319,7 @@ print(tukey.summary())
 | **Bachelor's Degree** | Graduação (Bacharelado) | Superior |
 | **Master's Degree** | Mestrado | Pós-graduação |
 
-![image.png](attachment:7a724735-f6ef-4155-b5b5-e8411a71804c:image.png)
+<img width="1015" height="677" alt="Image" src="https://github.com/user-attachments/assets/e100a355-cd0c-4c73-829e-22c4f8a6f9bd" />
 
 - Resultados:
     - A média dos alunos cujos pais possuem associate’s degree são maiores do que “high school” e “some high school”.
@@ -315,3 +329,8 @@ print(tukey.summary())
     - A média dos alunos cujos pais possuem “some college” foram maiores que “high school”
 
 Embora existam pequenas diferenças numéricas entre as médias dos grupos de ensino superior, elas não são grandes o suficiente para serem consideradas estatisticamente diferentes. Para o  estudo, o grande divisor de águas na performance dos alunos parece ser se os pais possuem algum nível de ensino superior versus apenas o ensino médio.
+
+
+Conclusão:
+
+Podemos concluir com base na análise do banco de dados "StudentsPerformance" que existe uma relação entre gênero e desempenho nas disciplinas, sendo os estudantes homens com maior desempenho em matemática e as estudantes mulheres com maior desempenho em leitura e escrita. Além disso, a renda dos pais dos alunos influenciam no desempenho, bem como o grau de escolaridade dos pais, apresentando maior desempenho os estudantes de maior renda e de pais com nível superior.
